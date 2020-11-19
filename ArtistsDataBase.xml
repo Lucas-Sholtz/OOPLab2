@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArtistsDataBase>
+  <artist ID="1" ARTIST="999999999">
+    <album ALBUM="9NINE" YEAR="2019" GENRE="Techno">
+      <track ID ="1"
+             NAME="LOVE 4 RAVE"
+             DURATION="353"
+             LIKES="11800"
+             PLAYS="339000">
+      </track>
+      <track ID ="2"
+             NAME="Rave 4 love"
+             DURATION="301"
+             LIKES="6396"
+             PLAYS="201000">
+      </track>
+      <track ID ="3"
+             NAME="HELL 999"
+             DURATION="241"
+             LIKES="3563"
+             PLAYS="57700">
+      </track>
+      <track ID ="4"
+             NAME="000000003"
+             DURATION="325"
+             LIKES="5785"
+             PLAYS="163000">
+      </track>
+      <track ID ="5"
+             NAME="XSERIES01"
+             DURATION="300"
+             LIKES="3456"
+             PLAYS="42300">
+      </track>
+      <track ID ="6"
+             NAME="000000005"
+             DURATION="301"
+             LIKES="4650"
+             PLAYS="90400">
+      </track>
+      <track ID ="7"
+             NAME="000000002"
+             DURATION="346"
+             LIKES="3784"
+             PLAYS="75400">
+      </track>             
+    </album>
+  </artist>
+  <artist ID="2" ARTIST="BLVCK CEILING">
+    <album ALBUM="BLVCK" YEAR="2018" GENRE="Witch house">
+      <track ID ="1"
+             NAME="bombay"
+             DURATION="188"
+             LIKES="3807"
+             PLAYS="202000">
+      </track>
+      <track ID ="2"
+             NAME="Chlorine"
+             DURATION="132"
+             LIKES="974"
+             PLAYS="12100">
+      </track>
+      <track ID ="3"
+             NAME="Kaneda"
+             DURATION="288"
+             LIKES="874"
+             PLAYS="10500">
+      </track>
+      <track ID ="4"
+             NAME="PARK EYES"
+             DURATION="298"
+             LIKES="42000"
+             PLAYS="2919218">
+      </track>
+      <track ID ="5"
+             NAME="Moonlight"
+             DURATION="135"
+             LIKES="1378"
+             PLAYS="36000">
+      </track>
+      <track ID ="6"
+             NAME="YOUNG"
+             DURATION="275"
+             LIKES="2987"
+             PLAYS="87700">
+      </track>
+    </album>
+  </artist>
+  <artist ID="3" ARTIST="Bones">
+    <album ALBUM="REMAINS" YEAR="2020" GENRE="Rap">
+      <track ID ="1"
+             NAME="MonsterMash"
+             DURATION="97"
+             LIKES="1679"
+             PLAYS="272000">
+      </track>
+      <track ID ="2"
+             NAME="bentley"
+             DURATION="192"
+             LIKES="1430"
+             PLAYS="280000">
+      </track>
+      <track ID ="3"
+             NAME="SocialCues"
+             DURATION="158"
+             LIKES="967"
+             PLAYS="152000">
+      </track>
+      <track ID ="4"
+             NAME="SpiderSilkRobes"
+             DURATION="161"
+             LIKES="2598"
+             PLAYS="205000">
+      </track>
+    </album>
+    <album ALBUM="OFFLINE" YEAR="2020" GENRE="Rap">
+      <track ID ="1"
+             NAME="Offline"
+             DURATION="36"
+             LIKES="756"
+             PLAYS="171000">
+      </track>
+      <track ID ="2"
+             NAME="Molotov"
+             DURATION="766"
+             LIKES="8967"
+             PLAYS="612000">
+      </track>
+      <track ID ="3"
+             NAME="vertigo"
+             DURATION="137"
+             LIKES="5489"
+             PLAYS="450000">
+      </track>
+      <track ID ="4"
+             NAME="StateOfEmergency"
+             DURATION="130"
+             LIKES="6712"
+             PLAYS="416000">
+      </track>
+    </album>
+  </artist>
+  <artist ID="4" ARTIST="CHERNOBURKV">
+    <album ALBUM="ЛАБИРИНТЫ" YEAR="2020" GENRE="Electronic">
+      <track ID ="1"
+             NAME="Поезда"
+             DURATION="416"
+             LIKES="489"
+             PLAYS="9377">
+      </track>
+      <track ID ="2"
+             NAME="Миражи"
+             DURATION="276"
+             LIKES="489"
+             PLAYS="4541">
+      </track>
+      <track ID ="3"
+             NAME="Не помню"
+             DURATION="216"
+             LIKES="312"
+             PLAYS="4703">
+      </track>
+      <track ID ="4"
+             NAME="Близнецы"
+             DURATION="128"
+             LIKES="707"
+             PLAYS="4829">
+      </track>
+    </album>
+    <album ALBUM="COLLAPSE" YEAR="2017" GENRE="Witch house">
+      <track ID ="1"
+             NAME="little ghost"
+             DURATION="230"
+             LIKES="1079"
+             PLAYS="16100">
+      </track>
+      <track ID ="2"
+             NAME="heavy"
+             DURATION="170"
+             LIKES="450"
+             PLAYS="8441">
+      </track>
+      <track ID ="3"
+             NAME="save"
+             DURATION="189"
+             LIKES="374"
+             PLAYS="4152">
+      </track>
+    </album>
+  </artist>
+</ArtistsDataBase>
