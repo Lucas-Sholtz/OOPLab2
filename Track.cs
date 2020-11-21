@@ -16,6 +16,7 @@ namespace OOPLab2
         private string _duration = null;
         private string _likes = null;
         private string _plays = null;
+
         #region Properties
         public string Artist
         {
@@ -62,18 +63,8 @@ namespace OOPLab2
         {
 
         }
-        public Track(string[] args)
-        {
-            Artist = args[0];
-            Album = args[1];
-            Year = args[2];
-            Genre = args[3];
-            Name = args[4];
-            Duration = args[5];
-            Likes = args[6];
-            Plays = args[7];
-        }
-        public bool CompareTracks(Track b)
+
+        public bool CompareWith(Track b)
         {
             return (this.Artist == b.Artist &&
                     this.Album == b.Album &&
@@ -84,10 +75,5 @@ namespace OOPLab2
                     this.Likes == b.Likes &&
                     this.Plays == b.Plays);
         }
-        /*public IStrategy Algorithm { get; set; }
-        public List<Track> DoAlgorithm(Track track, string path)
-        {
-            return Algorithm.DoAlgorithm(track, path);
-        }*/
     }
 }

@@ -44,9 +44,9 @@ namespace OOPLab2
             {
                 info.Add(SearchByAttribute("track", "PLAYS", track.Plays, 2));
             }
-            return Cross(info, track);
+            return Filter(info, track);
         }
-        public List<Track> SearchByAttribute(string nodeName, string attribute, string myTemplate, int level)
+        private List<Track> SearchByAttribute(string nodeName, string attribute, string myTemplate, int level)
         {
             List<Track> result = new List<Track>();
 
@@ -99,12 +99,10 @@ namespace OOPLab2
             }
             return result;
         }
-        public Track Info(XmlNode node)
+        private Track Info(XmlNode node)
         {
             Track result = new Track();
-            
-            //if (node.Name == "track")
-            //{
+
                 result.Artist = node.ParentNode.ParentNode.Attributes.GetNamedItem("ARTIST").Value;
                 result.Album = node.ParentNode.Attributes.GetNamedItem("ALBUM").Value;
                 result.Year = node.ParentNode.Attributes.GetNamedItem("YEAR").Value;
@@ -113,24 +111,13 @@ namespace OOPLab2
                 result.Duration = node.Attributes.GetNamedItem("DURATION").Value;
                 result.Likes = node.Attributes.GetNamedItem("LIKES").Value;
                 result.Plays = node.Attributes.GetNamedItem("PLAYS").Value;
-            //}
-            /*else if(node.Name == "album")
-            {
-                //result.Artist = node.ParentNode.Attributes.GetNamedItem("ARTIST").Value;
-                result.Album = node.Attributes.GetNamedItem("ALBUM").Value;
-                result.Year = node.Attributes.GetNamedItem("YEAR").Value;
-                result.Genre = node.Attributes.GetNamedItem("GENRE").Value;
-            }
-            else if(node.Name == "artist")
-            {
-                result.Artist = node.Attributes.GetNamedItem("ARTIST").Value;
-            }*/
+
             return result;
         }
-        public List<Track> Cross(List<List<Track>> list, Track template)
+        private List<Track> Filter(List<List<Track>> list, Track template)
         {
             List<Track> result = new List<Track>();
-            if (list.Count!=0)/////////////////////////
+            if (list.Count!=0)
             {
                 Track[] first = list[0].ToArray();
                 if (first != null)
@@ -147,7 +134,7 @@ namespace OOPLab2
                             foreach (var t in l)
                             {
                                 flag = false;
-                                if (t.CompareTracks(elem))
+                                if (t.CompareWith(elem))
                                 {
                                     flag = true;
                                     break;
@@ -167,23 +154,5 @@ namespace OOPLab2
             }
             return result;
         }
-        /*public List<Track> Filter(List<List<Track>> list, Track template)
-        {
-            List<Track> result = new List<Track>();
-            foreach(var l in list)
-            {
-                foreach(var t in l)
-                {
-                    if (!template.CompareTracks(new Track()))
-                    {
-                        if (template.CompareTracks(t))
-                        {
-                            result.Add(t);
-                        }
-                    }
-                }
-            }
-            return result;
-        }*/
     }
 }

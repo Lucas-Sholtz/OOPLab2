@@ -39,7 +39,6 @@ namespace OOPLab2
             SortedSet<string> albumSet = new SortedSet<string>();
             SortedSet<int> yearSet = new SortedSet<int>();
             SortedSet<string> genreSet = new SortedSet<string>();
-            //SortedSet<string> nameSet = new SortedSet<string>();
             SortedSet<int> durationSet = new SortedSet<int>();
             SortedSet<int> likesSet = new SortedSet<int>();
             SortedSet<int> playsSet = new SortedSet<int>();
@@ -225,7 +224,7 @@ namespace OOPLab2
         private void toHTMLButton_Click(object sender, EventArgs e)
         {
             writer.WriteToXML(tracks);
-            writer.Transform();
+            writer.TransformToHTML();
         }
 
         private void Clear_Click(object sender, EventArgs e)

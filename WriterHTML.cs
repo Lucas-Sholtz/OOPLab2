@@ -1,28 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Xml.Xsl;
 namespace OOPLab2
 {
     public class WriterHTML
     {
-        public string xsl = @"C:\\Users\\miste\\source\\repos\\OOPLab2\\HTMLOutput.xsl";
-        public string output = @"C:\\Users\\miste\\source\\repos\\OOPLab2\\output.xml";
-        public string html = @"C:\\Users\\miste\\source\\repos\\OOPLab2\\output.html";
+        private string xsl = @"C:\\Users\\miste\\source\\repos\\OOPLab2\\HTMLOutput.xsl";
+        private string output = @"C:\\Users\\miste\\source\\repos\\OOPLab2\\output.xml";
+        private string html = @"C:\\Users\\miste\\source\\repos\\OOPLab2\\output.html";
 
         public void WriteToXML(List<Track> tracks)
         {
-            ClearXML();
+            BeginXML();
             foreach(var t in tracks)
             {
                 AddToXML(t);
             }
             EndXML();
         }
-        void AddToXML(Track track)
+        private void AddToXML(Track track)
         {
             StreamWriter resultsFile = new StreamWriter(output, true);
             resultsFile.WriteLine("<Track");
@@ -38,7 +34,7 @@ namespace OOPLab2
             resultsFile.Close();
         }
 
-        void ClearXML()
+        private void BeginXML()
         {
             StreamWriter resultsFile = new StreamWriter(output);
             resultsFile.WriteLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
@@ -46,14 +42,14 @@ namespace OOPLab2
             resultsFile.Close();
         }
 
-        void EndXML()
+        private void EndXML()
         {
             StreamWriter resultsFile = new StreamWriter(output, true);
             resultsFile.WriteLine("</Tracks>");
             resultsFile.Close();
         }
 
-        public void Transform()
+        public void TransformToHTML()
         {
             XslCompiledTransform transform = new XslCompiledTransform();
             transform.Load(xsl);

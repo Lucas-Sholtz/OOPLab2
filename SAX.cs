@@ -6,23 +6,17 @@ namespace OOPLab2
 {
     class SAX : IStrategy
     {
-        public List<Track> tracks = new List<Track>();
         public List<Track> Process(Track track, string path)
         {
-            tracks.Clear();
+            List<Track> tracks = new List<Track>();
 
             XmlReader reader = XmlReader.Create(path);
             List<Track> result = new List<Track>();
 
-            Track find = null;
             string artist = null;
             string album = null;
             string year = null;
             string genre = null;
-            //string duration = null;
-            //tring name = null;
-            //string likes = null;
-            //string plays = null;
 
             while (reader.Read())
             {
@@ -57,7 +51,7 @@ namespace OOPLab2
                 }
                 if (reader.Name == "track")
                 {
-                    find = new Track();
+                    Track find = new Track();
                     find.Album = album;
                     find.Artist = artist;
                     find.Year = year;
@@ -91,28 +85,21 @@ namespace OOPLab2
             tracks = Filter(result, track);
             return tracks;
         } 
-        public List<Track> Filter(List<Track> tracks, Track template)
+        private List<Track> Filter(List<Track> tracks, Track template)
         {
             List<Track> result = new List<Track>();
             if (tracks.Count != 0)
             {
                 foreach (Track t in tracks)
                 {
-                    if ((t.Album == template.Album || template.Album == null) &&
-                        (t.Artist == template.Artist || template.Artist == null) &&
-                        (t.Year == template.Year || template.Year == null) &&
-                        (t.Genre == template.Genre || template.Genre == null) &&
-                        (t.Duration == template.Duration || template.Duration == null) &&
-                        (t.Likes == template.Likes || template.Likes == null) &&
-                        (t.Plays == template.Plays || template.Plays == null))
+                    if (((t.Album != null && t.Album == template.Album) || template.Album == null) &&
+                        ((t.Artist != null && t.Artist == template.Artist) || template.Artist == null) &&
+                        ((t.Year != null && t.Year == template.Year) || template.Year == null) &&
+                        ((t.Genre != null && t.Genre == template.Genre) || template.Genre == null) &&
+                        ((t.Duration != null && t.Duration == template.Duration) || template.Duration == null) &&
+                        ((t.Likes != null && t.Likes == template.Likes) || template.Likes == null) &&
+                        ((t.Plays != null && t.Plays == template.Plays) || template.Plays == null))
                     {
-                        if (t.Album != null&&
-                            t.Artist!=null&&
-                            t.Year!=null&&
-                            t.Genre!=null&&
-                            t.Duration!=null&&
-                            t.Likes!=null&&
-                            t.Plays!=null)
                         result.Add(t);
                     }
                 }

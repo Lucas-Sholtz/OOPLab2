@@ -9,12 +9,11 @@ namespace OOPLab2
 {
     class LINQ : IStrategy
     {
-        public List<Track> result = null;
-        XDocument document = new XDocument();
+        private XDocument document = new XDocument();
         public List<Track> Process(Track track, string path)
         {
             document = XDocument.Load(@path);
-            result = new List<Track>();
+            List<Track> result = new List<Track>();
 
             List<XElement> matches = (from val in document.Descendants("track")
                                       where            
